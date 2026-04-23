@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.main-menu a:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.main-menu a.selected {
+    background: #f39c12;
+    color: #2c3e50;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+main {
+    display: flex;
+    min-height: 500px;
+}
+
+.sidebar {
+    width: 220px;
+    background: #ecf0f1;
+    padding: 25px 15px;
+    border-right: 1px solid #bdc3c7;
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.side-menu a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #34495e;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #bdc3c7;
+}
+
+.side-menu a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+.side-menu a.selected {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 2px 8px rgba(231,76,60,0.3);
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #f9f9f9;
+}
+
+.content h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff5f5;
+    box-shadow: 0 5px 20px rgba(255,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ffcccc;
+}
+
+.multiplication-table td {
+    border: 1px solid #ffcccc;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.multiplication-table tr:hover td {
+    background: #ffe0e0;
+}
+
+.multiplication-table td a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 2px;
+    transition: color 0.2s ease;
+}
+
+.multiplication-table td a:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+.single-column td {
+    padding: 0;
+}
+
+.single-column .ttRowCell {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ffcccc;
+}
+
+.single-column .ttRowCell:last-child {
+    border-bottom: none;
+}
+
+.block-layout {
+    background: #f0f8ff;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,255,0.1);
+    border: 1px solid #b8d4ff;
+}
+
+.ttRow {
+    display: flex;
+    border-bottom: 1px solid #b8d4ff;
+}
+
+.ttRow:last-child {
+    border-bottom: none;
+}
+
+.ttRowCell {
+    flex: 1;
+    padding: 12px 8px;
+    text-align: center;
+    border-right: 1px solid #b8d4ff;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.ttRowCell:last-child {
+    border-right: none;
+}
+
+.ttRow:hover .ttRowCell {
+    background: #e6f3ff;
+}
+
+.ttRowCell a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 2px;
+    transition: color 0.2s ease;
+}
+
+.ttRowCell a:hover {
+    color: #1a5276;
+    text-decoration: underline;
+}
+
+.ttSingleRow {
+    padding: 10px;
+}
+
+.ttSingleRow .ttRowCell {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #b8d4ff;
+}
+
+.ttSingleRow .ttRowCell:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+}
+
+.footer-info span {
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #bdc3c7;
+    }
+    
+    .side-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .side-menu a {
+        min-width: 60px;
+    }
+    
+    .ttRow {
+        flex-direction: column;
+    }
+    
+    .ttRowCell {
+        border-right: none;
+        border-bottom: 1px solid #b8d4ff;
+    }
+    
+    .ttRowCell:last-child {
+        border-bottom: none;
+    }
+    
+    .multiplication-table {
+        font-size: 12px;
+    }
+    
+    .multiplication-table td {
+        padding: 8px 4px;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .content {
+        padding: 20px 10px;
+    }
+    
+    .ttRowCell, .multiplication-table td {
+        font-size: 11px;
+    }
+}
