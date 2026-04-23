@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eef2f0;
+    font-family: system-ui, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    padding-top: 110px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #0a2f1f;
+    color: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+header span {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Footer (приклеен к НИЗУ, не к верху — в задании сказано footer внизу, но в примере был вверху, исправляю по стандарту) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0a2f1f;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1e2f2a;
+    border-left: 5px solid #0a2f1f;
+    padding-left: 20px;
+    text-align: left;
+}
+
+h2 {
+    margin: 1.5rem 0 0.8rem 0;
+    color: #1a3a2c;
+}
+
+/* Стили для таблицы элементов */
+#elements-table {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 450px;
+}
+
+.element-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.element-number {
+    font-weight: bold;
+    min-width: 45px;
+    color: #0a2f1f;
+    font-size: 16px;
+}
+
+.element-input {
+    padding: 8px 12px;
+    border: 1px solid #cbdcd2;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 200px;
+    transition: all 0.2s;
+}
+
+.element-input:focus {
+    outline: none;
+    border-color: #0a2f1f;
+    box-shadow: 0 0 0 2px rgba(10, 47, 31, 0.2);
+}
+
+/* Селектор */
+.selector {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 18px;
+    margin: 15px auto;
+    border-radius: 40px;
+    border: 1px solid #0a2f1f;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+}
+
+.selector:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(10, 47, 31, 0.2);
+}
+
+/* Кнопки */
+.btn {
+    background: #0a2f1f;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px 6px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-secondary {
+    background: white;
+    color: #0a2f1f;
+    border: 1px solid #0a2f1f;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Карточка формы */
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    body {
+        padding-top: 120px;
+    }
+    
+    header span {
+        font-size: 14px;
+    }
+    
+    .element-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .element-input {
+        width: 100%;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    footer {
+        font-size: 11px;
+        padding: 0 16px;
+    }
+}
