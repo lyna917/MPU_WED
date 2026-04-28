@@ -183,13 +183,6 @@ if ($has_text && $text_cp1251 !== '') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <footer>
-        <div class="footer-content">
-            <span>© 2026 Орлов Игорь Сергеевич</span>
-            <span>Результат анализа</span>
-        </div>
-    </footer>
-
     <main>
         <h1>Результат анализа текста</h1>
 
@@ -250,5 +243,11 @@ if ($has_text && $text_cp1251 !== '') {
             <a href="index.html" class="button-link">← Другой анализ</a>
         </div>
     </main>
+        <footer>
+        <div class="footer-content">
+            <span>© 2026 Орлов Игорь Сергеевич</span>
+            <span>Результат анализа</span>
+        </div>
+    </footer>
 </body>
 </html>

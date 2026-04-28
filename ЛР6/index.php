@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'email' => $email
     ];
 
-    // Отправка email (реальная)
+    // Отправка email (подавляем Warning, но сохраняем сообщение об ошибке)
     if ($sendEmail && !empty($email)) {
         $emailText = "ФИО: $fio\n";
         $emailText .= "Группа: $group\n";
@@ -133,9 +133,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers = "From: test@auto.ru\r\n";
         $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
-        if (mail($email, $subject, $emailText, $headers)) {
+        // Подавляем Warning с помощью @, но сохраняем результат в переменную
+        $mailResult = @mail($email, $subject, $emailText, $headers);
+        
+        if ($mailResult) {
             $emailSent = true;
             $resultData['emailSent'] = true;
+        } else {
+            $emailSent = false;
+            $resultData['emailSent'] = false;
         }
     }
 

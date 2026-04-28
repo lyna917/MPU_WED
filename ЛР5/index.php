@@ -22,7 +22,7 @@ $currentDateTime = date('d.m.Y H:i:s');
 
 // Функция преобразования числа в ссылку
 function outNumAsLink($num) {
-    if ($num >= 2 && $num <= 9) {
+    if ($num >= 2 && $num <= 9) { 
         $params = '';
         if (isset($_GET['html_type'])) {
             $params .= '&html_type=' . $_GET['html_type'];

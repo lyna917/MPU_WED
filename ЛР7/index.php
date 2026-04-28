@@ -126,7 +126,7 @@
     </main>
 
     <footer>
-        <span>&copy; 2026 Агаев Арслан</span>
+        <span>&copy; 2026 Орлов Игорь Сергеевич</span>
         <span>Лабораторная работа №7</span>
     </footer>
 
