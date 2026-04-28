@@ -143,39 +143,44 @@ main {
     font-size: 1.5em;
 }
 
+/* ========== ТАБЛИЧНАЯ ВЁРСТКА (КРАСНАЯ ТЕМА) ========== */
 .multiplication-table {
     width: 100%;
     border-collapse: collapse;
     background: #fff5f5;
-    box-shadow: 0 5px 20px rgba(255,0,0,0.1);
-    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255,0,0,0.15);
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #ffcccc;
+    border: 2px solid #e74c3c;
 }
 
 .multiplication-table td {
-    border: 1px solid #ffcccc;
+    border: 1px solid #ffaaaa;
     padding: 12px 8px;
     text-align: center;
     font-size: 14px;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #fff0f0;
 }
 
 .multiplication-table tr:hover td {
     background: #ffe0e0;
+    transform: scale(1.01);
 }
 
 .multiplication-table td a {
     color: #e74c3c;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 2px;
-    transition: color 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
 }
 
 .multiplication-table td a:hover {
     color: #c0392b;
-    text-decoration: underline;
+    background: rgba(231,76,60,0.1);
+    text-decoration: none;
 }
 
 .single-column td {
@@ -185,74 +190,88 @@ main {
 .single-column .ttRowCell {
     padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #ffcccc;
+    border-bottom: 1px solid #ffaaaa;
+    background-color: #fff0f0;
 }
 
 .single-column .ttRowCell:last-child {
     border-bottom: none;
 }
 
+/* ========== БЛОЧНАЯ ВЁРСТКА (СИНЯЯ ТЕМА) ========== */
 .block-layout {
     background: #f0f8ff;
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: 0 5px 20px rgba(0,0,255,0.1);
-    border: 1px solid #b8d4ff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,255,0.15);
+    border: 2px solid #3498db;
 }
 
 .ttRow {
     display: flex;
-    border-bottom: 1px solid #b8d4ff;
+    margin-bottom: 8px;
+    gap: 8px;
 }
 
 .ttRow:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .ttRowCell {
     flex: 1;
     padding: 12px 8px;
     text-align: center;
-    border-right: 1px solid #b8d4ff;
+    border: 1px solid #b8d4ff;
+    border-radius: 8px;
     font-size: 14px;
-    transition: background 0.2s ease;
-}
-
-.ttRowCell:last-child {
-    border-right: none;
+    transition: all 0.2s ease;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .ttRow:hover .ttRowCell {
     background: #e6f3ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52,152,219,0.2);
 }
 
 .ttRowCell a {
     color: #2980b9;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 2px;
-    transition: color 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
 }
 
 .ttRowCell a:hover {
     color: #1a5276;
-    text-decoration: underline;
+    background: rgba(41,128,185,0.1);
+    text-decoration: none;
 }
 
 .ttSingleRow {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .ttSingleRow .ttRowCell {
     padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #b8d4ff;
+    border: 1px solid #b8d4ff;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.ttSingleRow .ttRowCell:last-child {
-    border-bottom: none;
+.ttSingleRow .ttRowCell:hover {
+    background: #e6f3ff;
+    transform: translateX(5px);
 }
 
+/* ========== ПОДВАЛ ========== */
 footer {
     background: #2c3e50;
     color: #ecf0f1;
@@ -274,6 +293,7 @@ footer {
     border-radius: 20px;
 }
 
+/* ========== АДАПТИВНОСТЬ ========== */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -297,15 +317,11 @@ footer {
     
     .ttRow {
         flex-direction: column;
+        gap: 6px;
     }
     
     .ttRowCell {
         border-right: none;
-        border-bottom: 1px solid #b8d4ff;
-    }
-    
-    .ttRowCell:last-child {
-        border-bottom: none;
     }
     
     .multiplication-table {
