@@ -48,7 +48,7 @@ function manualSubstr($string, $start, $length = null) {
     return $result;
 }
 
-// Функция isnum() из методички (проверка, является ли строка числом)
+// Функция isnum()(проверка, является ли строка числом)
 function isnum($x) {
     if (strlen($x) == 0) return false;
     
